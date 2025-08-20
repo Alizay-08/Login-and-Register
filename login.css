@@ -1,0 +1,100 @@
+:root {
+  --primary-color: #C4DFDF;
+  --secondary-color: #D2E9E9;
+  --light-color: #E3F4F4;
+  --extra-light: #F8F6F4;
+  --text-dark: #1e1e1e;
+  --text-light: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--extra-light);
+  color: var(--text-dark);
+}
+
+
+
+.form-bg {
+  position: relative;
+  min-height: 100vh; 
+  background: url('register-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem; 
+}
+
+.form-bg .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(196, 223, 223, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.form-box {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 2px solid var(--primary-color);
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--light-color);
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: 1px solid var(--primary-color);
+}
+
+.input-group i {
+  color: var(--primary-color);
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.form-box button {
+  background: var(--primary-color);
+  border: none;
+  padding: 0.8rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-box button:hover {
+  background: var(--secondary-color);
+}
+
+.form-box p {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .form-box {
+    padding: 1.5rem;
+  }
+}
